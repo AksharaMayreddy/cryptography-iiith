@@ -9,7 +9,7 @@ var dbits;
 
 // JavaScript engine analysis
 var canary = 0xdeadbeefcafe;
-var j_lm = ((canary&0xffffff)==0xefcafe);
+var jLm = ((canary&0xffffff)==0xefcafe);
 
 // (public) Constructor
 function BigInteger(a,b,c) {
