@@ -25,7 +25,7 @@ function hex_hmac_sha1(k, d)
   { return rstr2hex(rstr_hmac_sha1(str2rstr_utf8(k), str2rstr_utf8(d))); }
 function b64_hmac_sha1(k, d)
   { return rstr2b64(rstr_hmac_sha1(str2rstr_utf8(k), str2rstr_utf8(d))); }
-function any_hmac_sha1(k, d, e)
+function anyHmacSha1(k, d, e)
   { return rstr2any(rstr_hmac_sha1(str2rstr_utf8(k), str2rstr_utf8(d)), e); }
 
 /*
