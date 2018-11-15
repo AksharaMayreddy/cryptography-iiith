@@ -131,7 +131,7 @@ function resize_key(key, l) {
 }
 
 function next_function() {
-    current_function = rand_sequence(current_l);
+    currentFunction = rand_sequence(current_l);
 }
 
 function function_value(input, key) {
