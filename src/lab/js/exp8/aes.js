@@ -124,12 +124,12 @@ function randomHexString(length) {
 }
 
 function nextPlainText() {
-    var length_plainblock = 32;
+    var lengthPlainblock = 32;
     var num_plainblocks = 5;
     var plaintext = "";
 
     for( var i=0; i < num_plainblocks; i++ ) {
-	plaintext += randomHexString(length_plainblock);
+	plaintext += randomHexString(lengthPlainblock);
 	plaintext += "\n";
     }
     document.getElementById("plainarea").value = plaintext;
