@@ -10,9 +10,9 @@ function format_bitstring( ary, spacing )
    {
       if ( (i%spacing) == 1 )
          formattedBitstring += " ";	// time to add a space
-      formatted_bitstring += ary[i];	// and the bit
+      formattedBitstring += ary[i];	// and the bit
    }
-   return formatted_bitstring;
+   return formattedBitstring;
 }
 
 // special value stored in x[0] to indicate a problem
@@ -282,7 +282,7 @@ function des_round( L, R, KeyR )
    for( i=0; i<33; i++ )
    {
       // copy exising L bits
-      temp_L[i] = L[i];
+      tempL[i] = L[i];
 
       // set L = R
       L[i] = R[i];
@@ -305,10 +305,10 @@ function des_round( L, R, KeyR )
    split_int( S_out, 29, 4, do_S( S8, 43, E_result ) );
 
    // do the P permutation
-   permute( R, S_out, P_perm );
+   permute( R, S_out, PPerm );
 
    // xor this with old L to get the new R
-   xor( R, temp_L );
+   xor( R, tempL );
 }
 
 // shift the CD values left 1 bit
@@ -424,7 +424,7 @@ function do_des( do_encrypt )
 
    // get the message from the user
    // also check if it is ASCII or hex
-   get_plaintext( inData, document.stuff.indata.value );
+   getPlaintext( inData, document.stuff.indata.value );
 
    // problems??
    if ( inData[0] == ERROR_VAL )
