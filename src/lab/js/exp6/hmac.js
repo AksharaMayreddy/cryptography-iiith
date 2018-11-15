@@ -170,7 +170,7 @@ function checkAnswer() {
 	}
 	
     var key = document.getElementById("key").value;
-	var kxoripad = xor_strings(key, pad_iopad("01011100"));
+	var kxoripad = xorStrings(key, pad_iopad("01011100"));
     var plaintext = pad_input(document.getElementById("plaintext").value);
 	plaintext += pad_input_before(get_num_in_binary(plaintext.length));
     var iv = document.getElementById("iv").value;
@@ -182,7 +182,7 @@ function checkAnswer() {
 		t = hash_function(gethashfor);
 	}
 
-	var kxoropad = xor_strings(key, pad_iopad("00110110"));
+	var kxoropad = xorStrings(key, pad_iopad("00110110"));
 	var t2 = hash_function(iv + kxoropad);
 	t = hash_function(t2 + t);
 	
