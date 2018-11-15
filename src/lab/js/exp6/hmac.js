@@ -4,7 +4,7 @@ function trim(str) {
 
 var current_l=8;
 
-function xor_strings(a, b) {
+function xorStrings(a, b) {
         if(a.length != b.length) {
                 alert("Error calculating XOR");
                 return;
@@ -60,7 +60,7 @@ function next_plain_text() {
     document.getElementById("plaintext").value = rand_sequence(len);
 }
 
-function next_IV() {
+function nextIV() {
     var l = document.getElementById("l").value;
     if (! isUnsignedInteger(l) ) {
 	alert("l should be a positive integer");
