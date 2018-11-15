@@ -3,13 +3,13 @@ function format_bitstring( ary, spacing )
 {
    var i;
 
-   var formatted_bitstring = "";
+   var formattedBitstring = "";
 
    // add bits
    for( i=1; i<ary.length; i++ )
    {
       if ( (i%spacing) == 1 )
-         formatted_bitstring += " ";	// time to add a space
+         formattedBitstring += " ";	// time to add a space
       formatted_bitstring += ary[i];	// and the bit
    }
    return formatted_bitstring;
@@ -53,7 +53,7 @@ var E_perm = new Array( -1,
 	28, 29, 30, 31, 32, 1 );
 
 // per-round permutation
-var P_perm = new Array( -1,
+var PPerm = new Array( -1,
 	16, 7, 20, 21, 29, 12, 28, 17,
 	1, 15, 23, 26, 5, 18, 31, 10,
 	2, 8, 24, 14, 32, 27, 3, 9,
@@ -152,7 +152,7 @@ function split_int( ary, start, bitc, val )
    }
 }
 
-function get_plaintext( bitarray, str )
+function getPlaintext( bitarray, str )
 {
    // insert note we probably are ok
    bitarray[0] = -1;
@@ -278,7 +278,7 @@ function des_round( L, R, KeyR )
    var S_out = new Array( 33 );
 
    // copy the existing L bits, then set new L = old R
-   var temp_L = new Array( 33 );
+   var tempL = new Array( 33 );
    for( i=0; i<33; i++ )
    {
       // copy exising L bits
