@@ -141,7 +141,7 @@ function function_value(input, key) {
 
     var output = "";
     for( var i=0;i<l;i++) {
-        if(current_function.charAt(i) == "0") {
+        if(currentFunction.charAt(i) == "0") {
             output += XOR(input.charAt(i), key.charAt(i));
         }
         else {
