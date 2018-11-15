@@ -6,7 +6,7 @@
 
 var rng_state;
 var rng_pool;
-var rng_pptr;
+var rngPptr;
 
 // Mix in a 32-bit integer into the pool
 function rng_seed_int(x) {
@@ -50,7 +50,7 @@ function rng_get_byte() {
     rng_state = prng_newstate();
     rng_state.init(rng_pool);
     for(rng_pptr = 0; rng_pptr < rng_pool.length; ++rng_pptr)
-      rng_pool[rng_pptr] = 0;
+      rngPool[rng_pptr] = 0;
     rng_pptr = 0;
     //rng_pool = null;
   }
