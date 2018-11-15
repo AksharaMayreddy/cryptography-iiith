@@ -113,7 +113,7 @@ function resize_key(key, l) {
     return key;
 }
 
-function next_function() {
+function nextFunction() {
     current_function = rand_sequence(current_l);
 }
 
